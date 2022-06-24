@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.email,
-                    color: Colors.pink.shade400,
+                    color: Colors.greenAccent.shade700,
                   ),
                   label: Text("Email"),
                 ),
@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.lock,
-                    color: Colors.pink.shade400,
+                    color: Colors.greenAccent.shade700,
                   ),
                   label: Text("Password"),
                 ),
@@ -50,11 +50,11 @@ class _LoginState extends State<Login> {
                 height: 60,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.pink.shade400,
+                  color: Colors.greenAccent.shade700,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.pink.shade400),
+                  style: ElevatedButton.styleFrom(primary: Colors.greenAccent.shade700),
                   onPressed: () {
                     Auth().login(email.text, password.text, context);
 
@@ -83,7 +83,7 @@ class _LoginState extends State<Login> {
                     },
                     child: Text(
                       "Sign Up",
-                      style: TextStyle(color: Colors.pink.shade400),
+                      style: TextStyle(color: Colors.greenAccent.shade700),
                     ),
                   ),
                 ],

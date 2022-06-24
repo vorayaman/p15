@@ -25,12 +25,12 @@ class Auth {
     {
       if (e.code == 'user-not-found') {
 
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("User Not Found Please Singup"),backgroundColor: Colors.pink.shade400,));
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("User Not Found Please Singup"),backgroundColor: Colors.greenAccent.shade700,));
 
 
       } else if (e.code == 'wrong-password') {
 
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Password Wrong Please Singup"),backgroundColor: Colors.pink.shade400,));
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Password Wrong Please Singup"),backgroundColor: Colors.greenAccent.shade700,));
 
       }
     }

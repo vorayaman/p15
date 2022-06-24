@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:p15/fireclass.dart';
 import 'package:p15/homepage.dart';
 import 'package:p15/login.dart';
+import 'package:p15/providar/createnote.dart';
 import 'package:p15/signup.dart';
 
 void main() async {
@@ -12,6 +13,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(
+
     MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
@@ -19,6 +21,7 @@ void main() async {
         '/home': (context) => Home(),
         '/login': (context) => Login(),
         '/signup': (context) => Signup(),
+        '/create': (context) => CreateNote(),
       },
     ),
   );
@@ -37,18 +40,21 @@ class _SplashState extends State<Splash> {
     check(context);
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.green.shade600,
+        backgroundColor: Colors.greenAccent.shade700,
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
                 Icons.event_note_outlined,
-                color: Colors.white,size: 100,
+                color: Colors.white,size: 120,
               ),
+              SizedBox(height: 10,),
               Text(
                 "Note Keeper",
-                style: TextStyle(color: Colors.white,letterSpacing: 1),
+                style: TextStyle(color: Colors.white,letterSpacing: 1,fontSize: 20),
               ),
+              SizedBox(height: 10,),
               CircularProgressIndicator(
                 color: Colors.white,
               ),
